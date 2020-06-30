@@ -8,9 +8,9 @@
 #include "bici.h"
 
 
-int getRandom(){
+int getRandom(int desde, int hasta){
 	int aleatorio = 50;
-	aleatorio = rand()% 121 + 50;  // minimo 50 maximo 70 + 50
+	aleatorio = rand()% hasta + desde;  // minimo 50 maximo 70 + 50
 
 	return aleatorio;
 }

@@ -166,3 +166,11 @@ int filtTipo(eBicicleta* this, eBicicleta* thistwo){
 	}
 	return retorno;
 }
+
+int filtTiempo(eBicicleta* this, eBicicleta* thistwo){
+	int retorno = -1;
+	if(this->tiempo > thistwo->tiempo){
+		retorno = 1;
+	}
+	return retorno;
+}

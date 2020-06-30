@@ -507,15 +507,20 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
 }
 
-void ll_map(LinkedList* this, int (*pFunc)){
+int ll_map(LinkedList* this, int (*pFunc)(int ,int)){
+	int retorno = -1;
+	int tam;
 	eBicicleta* bici;
 
-	if(this != NULL && pFunc != NULL){
-		for(int i = 0 ; i < ll_len(this); i++){
+	if(this != NULL){
+		tam = ll_len(this);
+		for(int i = 0 ; i < tam; i++){
 			bici = ll_get(this, i);
-			bici->tiempo = *pFunc;
+			bici->tiempo = pFunc(50, 121);
 		}
+	retorno = 0;
 	}
+	return retorno;
 }
 
 

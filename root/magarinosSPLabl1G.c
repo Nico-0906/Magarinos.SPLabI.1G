@@ -56,7 +56,7 @@ int main(void)
 			getchar();
 			break;
 		case 3:
-			//ll_map(ListaBicicletas, getRandom);
+			ll_map(ListaBicicletas, getRandom);
 			printf("\nTiempo asignado a las bicicletas!");
 			getchar();
 			break;
@@ -66,7 +66,8 @@ int main(void)
 			break;
 		case 5:
 			auxLista = ll_clone(ListaBicicletas);
-			ll_sort(auxLista, filtTipo, 1);
+			ll_sort(auxLista, filtTiempo, 1);
+			//ll_sort(auxLista, filtTipo, 1);
 			controller_ListBicicletas(auxLista);
 			getchar();
 			break;

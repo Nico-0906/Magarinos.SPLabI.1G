@@ -25,3 +25,4 @@ void bici_show(eBicicleta* this);
 void generarListaFiltrada(LinkedList* lista, LinkedList* newLista, char* tipo);
 void filtrarPorTipo(LinkedList* ListaBicicletas);
 int filtTipo(eBicicleta* this, eBicicleta* thistwo);
+int filtTiempo(eBicicleta* this, eBicicleta* thistwo);
